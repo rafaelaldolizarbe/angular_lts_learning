@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+body.dark-mode {
+    background-color: #181a1b !important;
+    color: #f1f1f1 !important;
+  }
+  
+  body.dark-mode .card,
+  body.dark-mode .navbar,
+  body.dark-mode .navbar-nav,
+  body.dark-mode .nav-link,
+  body.dark-mode .navbar-brand,
+  body.dark-mode .dropdown-menu,
+  body.dark-mode .dropdown-item,
+  body.dark-mode .form-control,
+  body.dark-mode .bg-light {
+    background-color: #23272b !important;
+    color: #f1f1f1 !important;
+  }
+  
+  body.dark-mode .btn-primary {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+  }
+  body.dark-mode .nav-link,
+  body.dark-mode .dropdown-item {
+  color: #f1f1f1 !important;
+}
+
+  body.dark-mode .dropdown-item:hover,
+  body.dark-mode .dropdown-item:focus {
+  background-color: #343a40 !important;
+  color: #fff !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #b0b0b0 !important;
+  opacity: 1;
+}
