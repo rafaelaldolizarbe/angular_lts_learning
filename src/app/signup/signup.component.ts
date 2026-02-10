@@ -20,7 +20,7 @@ export class SignupComponent {
 
   constructor(private http: HttpClient, private router: Router) {}
   goToLogin(){
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
   onSubmit() {
     const body = {

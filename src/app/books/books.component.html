@@ -1,1 +1,19 @@
-<p>books works!</p>
+<h1>Livros </h1>
+
+
+
+@if (books.length) {
+  <ul>
+    @for (item of books; track item) {
+
+      <app-bookcards [book]="item"></app-bookcards>
+    }
+  </ul>
+}
+@else {
+  <ng-template>
+    <p>Carregando livros...</p>
+  </ng-template>
+}
+
+  

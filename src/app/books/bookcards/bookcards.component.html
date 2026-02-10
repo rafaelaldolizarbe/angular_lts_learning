@@ -1,0 +1,17 @@
+<div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Name {{ book.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          @for (writer of book.writers; track writer) {
+            <span >
+              {{ writer.firstName }} {{ writer.lastName }}
+            </span>
+
+          }
+        </h6>
+        <p class="card-text">{{ book.description }}</p>
+        <!-- Adicione outros campos conforme necessário -->
+      </div>
+    </div>
+  </div>

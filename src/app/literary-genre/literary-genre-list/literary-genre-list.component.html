@@ -1,0 +1,14 @@
+<h1>Gêneros Literários</h1>
+@if (genres.length) {
+    <ul>
+      @for (item of genres; track item) {
+  
+        <app-genre-card [genre]="item"></app-genre-card>
+      }
+    </ul>
+  }
+  @else {
+    <ng-template>
+      <p>Carregando livros...</p>
+    </ng-template>
+  }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http'; // This is necessary for making HTTP requests
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../../environment';// Adjust the path as necessary
+import { environment } from '../../environment';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -21,8 +21,6 @@ export class LoginComponent {
       email: this.email,
       password: this.password
     };
-  
-
     this.http.post<any>(`${environment.apiUrl}/auth/authenticate`, body)
   .subscribe({
     next: (response) => {
@@ -30,8 +28,9 @@ export class LoginComponent {
       const refreshToken = response.refresh_token;
       localStorage.setItem('access_token', token);
       localStorage.setItem('refresh_token', refreshToken);
+      this.router.navigate(['/books']);
       alert('Login realizado com sucesso!');
-      console.log('Response:', response);
+      // console.log('Response:', response);
     },
     error: (err) => {
       alert('Usuário ou senha inválidos!');
@@ -44,4 +43,5 @@ export class LoginComponent {
     // Navigate to the signup page
     this.router.navigate(['/signup']);
   }
+  
 }
